@@ -1,6 +1,6 @@
-# err-jenkins - Jenkins plugin for Err
+# err-OpsGenie - Jenkins plugin for ErrBOT
 
-Err-jenkins is a plugin for [Err](https://github.com/gbin/err) that allows you to interact with [Jenkins](http://jenkins-ci.org), a continuous integration tool. 
+Err-OpsGenie is a plugin for [Err](https://github.com/gbin/err) that allows you to interact with [Jenkins](http://jenkins-ci.org), a continuous integration tool. 
 and This plugin is based on the original work by [benvd](https://github.com/benvd/err-jenkins) with some modifications 
 
 ## Features
@@ -20,12 +20,11 @@ This plugin is tested against Python 2.7+ and 3.3+. It depends on the `python-je
 
 steps To install errbot: 
 
-1.Install errbot from pip
-2.Make a directory somewhere (here called errbot) to host Errbot's data files
-3.Initialize the directory
-4.Install errbot from pip or from [Err](ttps://github.com/errbotio/errbot) and Change the config.py file with your details
-5.Make a directory somewhere (here called errbot) to host Errbot's data files
-6.Initialize the directory
+Install errbot from pip
+Initialize the directory
+Install errbot from pip or from [Err](ttps://github.com/errbotio/errbot) and Change the config.py file with your details
+Make a directory somewhere (here called errbot) to host Errbot's data files
+Initialize the directory
 
 .. code:: bash
 
@@ -59,11 +58,10 @@ JENKINS_PASSWORD = 'mypassword'  # Use a password or token.
 
 ### Installation of OpsGenie
 
-
 Install 
 
 ```
-!repos install repoURL
+!repos install https://github.com/santoshpkatageri/err-OpsGenie
 ```
 
 ### Commands
