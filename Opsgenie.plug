@@ -1,0 +1,9 @@
+[Core]
+Name = Opsgenie
+Module = Opsgenie
+
+[Python]
+Version = 2+
+
+[Documentation]
+Description = This is a Err BOT integration with Jenkins CI 

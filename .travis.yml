@@ -1,0 +1,21 @@
+language: python
+
+cache: pip
+
+python:
+  - 3.3
+  - 3.4
+  - 3.5
+
+install:
+  - pip install -q errbot pytest pytest-pep8 pytest-cov coveralls --use-wheel
+  - pip install -qr requirements.txt --use-wheel
+
+script:
+  - py.test --cov Opsgenie
+
+after_success:
+  - coveralls
+
+notifications:
+  email: false
