@@ -1,6 +1,6 @@
-# err-OpsGenie - Jenkins plugin for ErrBOT
+# D-Ops-BOT - Jenkins plugin for ErrBOT
 
-Err-OpsGenie is a plugin for [Err](https://github.com/gbin/err) that allows you to interact with [Jenkins](http://jenkins-ci.org), a continuous integration tool. 
+D-Ops-BOT is a plugin for [Err](https://github.com/gbin/err) that allows you to interact with [Jenkins](http://jenkins-ci.org), a continuous integration tool. 
 and This plugin is based on the original work by [benvd](https://github.com/benvd/err-jenkins) with some modifications 
 
 ## Features
@@ -61,12 +61,12 @@ JENKINS_PASSWORD = 'mypassword'  # Use a password or token.
 Install 
 
 ```
-!repos install https://github.com/santoshpkatageri/err-OpsGenie
+!repos install https://github.com/santoshpkatageri/D-Ops-BOT
 ```
 
 ### Commands
 
-Use `!help OpsGenie` to see the available commands and their explanation.
+Use `!help DOpsBOT` to see the available commands and their explanation.
 
 
 
