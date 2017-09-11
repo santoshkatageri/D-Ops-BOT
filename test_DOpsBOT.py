@@ -1,7 +1,7 @@
 # coding: utf-8
 from errbot.backends.test import testbot
 
-import Opsgenie
+import DOpsBOT
 
 
 class TestOpsgenie(object):
@@ -37,18 +37,18 @@ class TestOpsgenie(object):
         assert ('Oops, I need the name of the job you want me to disable.'
                 in testbot.pop_message())
 
-class TestOpsgenieStaticMethods(object):
+class TestDOpsBOTStaticMethods(object):
 
     def test_format_jobs_helper(self):
         jobs = [{'name': 'foo',
                  'fullname': 'foo bar',
                  'url': 'http://jenkins.example.com/job/foo/'}]
-        result = Opsgenie.Opsgenie.format_jobs(jobs)
+        result = DOpsBOT.DOpsBOT.format_jobs(jobs)
         assert result == 'foo bar (http://jenkins.example.com/job/foo/)'
 
     def test_format_jobs_helper_no_params(self):
         jobs = []
-        result = Opsgenie.Opsgenie.format_jobs(jobs)
+        result = DOpsBOT.DOpsBOT.format_jobs(jobs)
         assert result == 'No jobs found.'
 
     def test_format_params_helper(self):
@@ -58,7 +58,7 @@ class TestOpsgenieStaticMethods(object):
             'name': 'FOO',
             'type': 'StringParameterDefinition'
         }]
-        result = Opsgenie.Opsgenie.format_params(params)
+        result = DOpsBOT.DOpsBOT.format_params(params)
         assert result == """Type: StringParameterDefinition
 Description: foo bar baz
 Default Value: bar
@@ -68,12 +68,12 @@ Parameter Name: FOO
 
     def test_build_parameters_helper(self):
         params = ['FOO:bar', 'BAR:baz']
-        result = Opsgenie.Opsgenie.build_parameters(params)
+        result = DOpsBOT.DOpsBOT.build_parameters(params)
         assert result == {'FOO': 'bar', 'BAR': 'baz'}
 
     def test_build_parameters_helper_no_params(self):
         params = []
-        result = Opsgenie.Opsgenie.build_parameters(params)
+        result = DOpsBOT.DOpsBOT.build_parameters(params)
         assert result == {'': ''}
 
     def test_format_notification(self):
@@ -87,14 +87,14 @@ Parameter Name: FOO
                 "status": "SUCCESS",
                 "url": "job/asgard/1/",
                 "scm": {
-                    "url": "https://github.com/santoshpkatageri/err-jenkins.git",
+                    "url": "https://github.com/santoshpkatageri/D-Ops-BOT.git",
                     "branch": "origin/master",
                     "commit": "0e51ed"
                 },
             }
         }
-        result = Opsgenie.Opsgenie.format_notification(body)
+        result = DOpsBOT.DOpsBOT.format_notification(body)
         assert result == """Build #1 SUCCESS for Job dummy \
 (http://jenkins.example.com/job/dummy/1/)
-Based on https://github.com/santoshpkatageri/err-jenkins.git/commit/0e51ed \
+Based on https://github.com/santoshpkatageri/D-Ops-BOT.git/commit/0e51ed \
 (origin/master)"""
