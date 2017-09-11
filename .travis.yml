@@ -12,7 +12,7 @@ install:
   - pip install -qr requirements.txt --use-wheel
 
 script:
-  - py.test --cov Opsgenie
+  - py.test --cov DOpsBOT
 
 after_success:
   - coveralls
