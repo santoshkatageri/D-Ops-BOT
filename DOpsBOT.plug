@@ -1,6 +1,6 @@
 [Core]
-Name = Opsgenie
-Module = Opsgenie
+Name = DOpsBOT
+Module = DOpsBOT
 
 [Python]
 Version = 2+
