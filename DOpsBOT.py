@@ -34,7 +34,7 @@ CONFIG_TEMPLATE = {
     'RECEIVE_NOTIFICATION': JENKINS_RECEIVE_NOTIFICATION,
     'CHATROOMS_NOTIFICATION': JENKINS_CHATROOMS_NOTIFICATION}
 
-class Opsgenie(BotPlugin):
+class DOpsBOT(BotPlugin):
     """This is a Err BOT integration with Jenkins CI"""
 
     min_err_version = '1.2.1'
@@ -49,7 +49,7 @@ class Opsgenie(BotPlugin):
                                 configuration.items()))
         else:
             config = CONFIG_TEMPLATE
-        super(Opsgenie, self).configure(config)
+        super(DOpsBOT, self).configure(config)
         return
 
     def check_configuration(self, configuration):
